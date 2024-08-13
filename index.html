@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BCA Courses Checklist</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+      th,
+      td {
+        padding: 10px;
+        border: 1px solid #ddd;
+        text-align: left;
+      }
+      th {
+        background-color: #f4f4f4;
+      }
+      tr.checked {
+        background-color: #d4edda;
+      }
+      #status {
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      .semester {
+        margin-bottom: 30px;
+      }
+      .semester h2 {
+        background-color: #ececec;
+        padding: 10px;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>BCA Courses Checklist</h1>
+    <div id="status">Completed: 0 | Incomplete: 39</div>
+
+    <!-- 1st Semester -->
+    <div class="semester" id="semester1">
+      <h2>1st Semester</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Code</th>
+            <th>Subject</th>
+            <th>Completed</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>BCS11</td>
+            <td>Computer Basics and PC Software</td>
+            <td>
+              <input
+                type="checkbox"
+                onchange="updateStatus(this)"
+                data-code="BCS11"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>BCS12</td>
+            <td>Mathematics</td>
+            <td>
+              <input
+                type="checkbox"
+                onchange="updateStatus(this)"
+                data-code="BCS12"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>BCSL13</td>
+            <td>Computer Basics and PC Software Lab</td>
+            <td>
+              <input
+                type="checkbox"
+                onchange="updateStatus(this)"
+                data-code="BCSL13"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>ECO1</td>
+            <td>Business Organization</td>
+            <td>
+              <input
+                type="checkbox"
+                onchange="updateStatus(this)"
+                data-code="ECO1"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>FEG2</td>
+            <td>Foundation Course in English 2</td>
+            <td>
+              <input
+                type="checkbox"
+                onchange="updateStatus(this)"
+                data-code="FEG2"
+              />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 2nd Semester -->
+    <div class="semester" id="semester2">
+      <h2>2nd Semester</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Code</th>
+            <th>Subject</th>
+            <th>Completed</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>MCS11</td>
+            <td>Problem Solving and Programming</td>
+            <td>
+              <input
+                type="checkbox"
+                onchange="updateStatus(this)"
+                data-code="MCS11"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>MCS12</td>
+            <td>Computer Org and Assembly Language Programming</td>
+            <td>
+              <input
+                type="checkbox"
+                onchange="updateStatus(this)"
+                data-code="MCS12"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>MCS13</td>
+            <td>Discrete Mathematics</td>
+            <td>
+              <input
+                type="checkbox"
+                onchange="updateStatus(this)"
+                data-code="MCS13"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>MCS15</td>
+            <td>Communication Skills</td>
+            <td>
+              <input
+                type="checkbox"
+                onchange="updateStatus(this)"
+                data-code="MCS15"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>ECO2</td>
+            <td>Accountancy-1</td>
+            <td>
+              <input
+                type="checkbox"
+                onchange="updateStatus(this)"
+                data-code="ECO2"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>BCSL21</td>
+            <td>C Language Programming Lab</td>
+            <td>
+              <input
+                type="checkbox"
+                onchange="updateStatus(this)"
+                data-code="BCSL21"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>BCSL22</td>
+            <td>Assembly Language Programming Lab</td>
+            <td>
+              <input
+                type="checkbox"
+                onchange="updateStatus(this)"
+                data-code="BCSL22"
+              />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 3rd Semester -->
+    <div class="semester" id="semester3">
+      <h2>3rd Semester</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Code</th>
+            <th>Subject</th>
+            <th>Completed</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>MCS14</td>
+            <td>System Analysis and Design</td>
+            <td>
+              <input
+                type="checkbox"
+                onchange="updateStatus(this)"
+                data-code="MCS14"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>MCS21</td>
+            <td>Data and File Structures</td>
+            <td>
+              <input
+                type="checkbox"
+                onchange="updateStatus(this)"
+                data-code="MCS21"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>MCS23</td>
+            <td>Introduction to Database Management Systems</td>
+            <td>
+              <input
+                type="checkbox"
+                onchange="updateStatus(this)"
+                data-code="MCS23"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>MCS31</td>
+            <td>Programming in C++</td>
+            <td>
+              <input
+                type="checkbox"
+                onchange="updateStatus(this)"
+                data-code="MCS31"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>BCSL32</td>
+            <td>C++ Programming Lab</td>
+            <td>
+              <input
+                type="checkbox"
+                onchange="updateStatus(this)"
+                data-code="BCSL32"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>BCSL33</td>
+            <td>Data and File Structures Lab</td>
+            <td>
+              <input
+                type="checkbox"
+                onchange="updateStatus(this)"
+                data-code="BCSL33"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>BCSL34</td>
+            <td>DBMS Lab</td>
+            <td>
+              <input
+                type="checkbox"
+                onchange="updateStatus(this)"
+                data-code="BCSL34"
+              />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 4th Semester -->
+    <div class="semester" id="semester4">
+      <h2>4th Semester</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Code</th>
+            <th>Subject</th>
+            <th>Completed</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>MCSL16</td>
+            <td>Internet Concepts and Web Design</td>
+            <td>
+              <input
+                type="checkbox"
+                onchange="updateStatus(this)"
+                data-code="MCSL16"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>MCS24</td>
+            <td>Statistical Techniques</td>
+            <td>
+              <input
+                type="checkbox"
+                onchange="updateStatus(this)"
+                data-code="MCS24"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>BCS40</td>
+            <td>Fundamentals of Computer Networks</td>
+            <td>
+              <input
+                type="checkbox"
+                onchange="updateStatus(this)"
+                data-code="BCS40"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>BCS41</td>
+            <td>Introduction to Algorithm Design</td>
+            <td>
+              <input
+                type="checkbox"
+                onchange="updateStatus(this)"
+                data-code="BCS41"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>BCS42</td>
+            <td>Java Programming Lab</td>
+            <td>
+              <input
+                type="checkbox"
+                onchange="updateStatus(this)"
+                data-code="BCS42"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>BCSL43</td>
+            <td>Statistical Techniques Lab</td>
+            <td>
+              <input
+                type="checkbox"
+                onchange="updateStatus(this)"
+                data-code="BCSL43"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>BCSL44</td>
+            <td>Algorithms Design Lab</td>
+            <td>
+              <input
+                type="checkbox"
+                onchange="updateStatus(this)"
+                data-code="BCSL44"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>BCSL45</td>
+            <td>Java Programming</td>
+            <td>
+              <input
+                type="checkbox"
+                onchange="updateStatus(this)"
+                data-code="BCSL45"
+              />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 5th Semester -->
+    <div class="semester" id="semester5">
+      <h2>5th Semester</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Code</th>
+            <th>Subject</th>
+            <th>Completed</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>BCS51</td>
+            <td>Object Oriented Analysis and Design</td>
+            <td>
+              <input
+                type="checkbox"
+                onchange="updateStatus(this)"
+                data-code="BCS51"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>BCS52</td>
+            <td>Network Programming and Administration</td>
+            <td>
+              <input
+                type="checkbox"
+                onchange="updateStatus(this)"
+                data-code="BCS52"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>BCS53</td>
+            <td>Software Testing</td>
+            <td>
+              <input
+                type="checkbox"
+                onchange="updateStatus(this)"
+                data-code="BCS53"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>BCS54</td>
+            <td>Advanced Database Management Systems</td>
+            <td>
+              <input
+                type="checkbox"
+                onchange="updateStatus(this)"
+                data-code="BCS54"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>BCS55</td>
+            <td>Computer Oriented Numerical Techniques</td>
+            <td>
+              <input
+                type="checkbox"
+                onchange="updateStatus(this)"
+                data-code="BCS55"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>BCSL56</td>
+            <td>Network Programming and Administration Lab</td>
+            <td>
+              <input
+                type="checkbox"
+                onchange="updateStatus(this)"
+                data-code="BCSL56"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>BCSL57</td>
+            <td>Advanced DBMS Lab</td>
+            <td>
+              <input
+                type="checkbox"
+                onchange="updateStatus(this)"
+                data-code="BCSL57"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>BCSL58</td>
+            <td>Computer Oriented Numerical Techniques Lab</td>
+            <td>
+              <input
+                type="checkbox"
+                onchange="updateStatus(this)"
+                data-code="BCSL58"
+              />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 6th Semester -->
+    <div class="semester" id="semester6">
+      <h2>6th Semester</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Code</th>
+            <th>Subject</th>
+            <th>Completed</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>MCS22</td>
+            <td>Operating System Concepts and Networking Management</td>
+            <td>
+              <input
+                type="checkbox"
+                onchange="updateStatus(this)"
+                data-code="MCS22"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>BCS62</td>
+            <td>eCommerce</td>
+            <td>
+              <input
+                type="checkbox"
+                onchange="updateStatus(this)"
+                data-code="BCS62"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>BCSL63</td>
+            <td>Operating System Concepts and Networking Management Lab</td>
+            <td>
+              <input
+                type="checkbox"
+                onchange="updateStatus(this)"
+                data-code="BCSL63"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>BCSP64</td>
+            <td>Project</td>
+            <td>
+              <input
+                type="checkbox"
+                onchange="updateStatus(this)"
+                data-code="BCSP64"
+              />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script>
+      // Function to update the completion status and save it to local storage
+      function updateStatus(checkbox) {
+        const row = checkbox.parentElement.parentElement;
+        const code = checkbox.getAttribute("data-code");
+        const checked = checkbox.checked;
+
+        if (checked) {
+          row.classList.add("checked");
+        } else {
+          row.classList.remove("checked");
+        }
+
+        // Save checkbox state to local storage
+        localStorage.setItem(code, checked);
+
+        // Update status count
+        const completed = document.querySelectorAll(
+          'input[type="checkbox"]:checked'
+        ).length;
+        const total = document.querySelectorAll(
+          'input[type="checkbox"]'
+        ).length;
+        document.getElementById(
+          "status"
+        ).innerText = `Completed: ${completed} | Incomplete: ${
+          total - completed
+        }`;
+      }
+
+      // Function to load the state of checkboxes from local storage
+      function loadStatus() {
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        checkboxes.forEach((checkbox) => {
+          const code = checkbox.getAttribute("data-code");
+          const checked = localStorage.getItem(code) === "true";
+          checkbox.checked = checked;
+          if (checked) {
+            checkbox.parentElement.parentElement.classList.add("checked");
+          }
+        });
+
+        // Update status count on load
+        const completed = document.querySelectorAll(
+          'input[type="checkbox"]:checked'
+        ).length;
+        const total = document.querySelectorAll(
+          'input[type="checkbox"]'
+        ).length;
+        document.getElementById(
+          "status"
+        ).innerText = `Completed: ${completed} | Incomplete: ${
+          total - completed
+        }`;
+      }
+
+      // Load the checkbox states on page load
+      window.onload = loadStatus;
+    </script>
+  </body>
+</html>
